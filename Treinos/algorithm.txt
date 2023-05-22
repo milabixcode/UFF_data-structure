@@ -1,0 +1,10 @@
+Alteração na lista:
+
+Parâmetros: lista, valor antigo, valor novo
+
+Implementação:
+
+Para cada nó da lista:
+    Se esse nó possuir informação igual ao antigo:
+        Atribuo o valor novo no info desse nó
+        Paro de procurar.

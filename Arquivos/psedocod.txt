@@ -1,0 +1,6 @@
+abro arquivo departamento
+abro arquivo funcionarios
+leio arquivo departamento
+leio arquivo funcionarios
+comparo o atributo codigo do depart do arq departamento com o codigo do depart do arq funcionario
+    se forem iguais, escrevo no arquivo out

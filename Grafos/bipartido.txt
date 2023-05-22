@@ -1,0 +1,20 @@
+crio uma pilha 
+pegar o primeiro vertice do grafo
+pinto o vertice
+empilho p vertice
+(enqto a pilha nao estiver vazia)
+    pego o topo da pilha
+    percorro os vizinhos do vertice do topo da pilha
+        checar se ta pintado
+        se estiver pintado  
+            checo se é da mesma cor que o vertice do topo
+            não é bipartido
+        se nao
+            pinto com a cor inversa
+            coloco os vizinhos na pilha
+    desempilho
+percorrer os vertices 
+checar se todos estao pintados
+se tiver algum que nao esteja pintado
+faço tudo de novo
+é bipartido
