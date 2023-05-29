@@ -1,0 +1,4 @@
+- Checo se arvore é'nula
+- atribuo o maior ao primeiro no
+- se tiver direita, vou pra direita enquanto tiver
+- se nao, o maior é o ultimo elemento

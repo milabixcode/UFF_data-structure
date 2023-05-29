@@ -1,0 +1,13 @@
+- Checo se arv é nula
+- Checo se primeiro elemento é menor
+    Se for coloco no vetor
+- vou para esquerda
+    se o elemento for menor coloco no vetor
+- vou para a direita
+    se o elemento for menor coloco no vetor
+- retorno o vetor
+
+{
+    ptr
+    len
+}

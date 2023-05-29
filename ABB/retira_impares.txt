@@ -1,0 +1,18 @@
+- Checo se arvore é nula
+- se o elemento da arvore é diferente do elemento que 
+estou procurando:
+    vou para o proximo
+    se nao tiver proximo
+        a arvore nao possui o elemento
+- se o elemento da arvore é igual ao elemento que
+estou procurando:
+    se o a nao tiver nem esquerda e nem direita
+        libero o elemento
+    se so tiver esq ou direita
+        esq ou dir passa a ser o a
+    se tiver esquerda e direita
+        vou para a esquerda
+        esquerda vira o elemento atual
+        libero o elemento que quero retirar
+        ligo a direita do elemento tirado a parte 
+    mais a direita do lado esquerdo
