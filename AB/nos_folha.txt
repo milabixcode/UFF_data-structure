@@ -1,0 +1,10 @@
+- checo se arvore vazia
+    se for, retorno 0
+- se primeiro elemento ja for no folha
+    retorno 1
+- verifico sem tem esquerda
+    ando pela esquerda ate achar um no sem filhos
+        contador + 1
+- verifico se tem direita
+    ando pela direita ate achar um no sem filhos
+        contador + 1

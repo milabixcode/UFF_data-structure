@@ -1,0 +1,5 @@
+-Checo se arvore vazia
+-Checo se o primeiro no tem esq e dir
+    se tiver: nao é zz
+    se nao esq ou nao dir:
+        é zz

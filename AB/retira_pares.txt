@@ -1,0 +1,20 @@
+vejo se arvore é vazia
+
+se nó é diferente do elemnento que quero retirar
+    procuro o elemento no
+        lado esquerdo
+        lado direito
+
+se nó é igual ao elemento que quero retirar
+    se esq e dir são vazios
+        free no elemento
+    se esq ou dir for vazio
+        aponta para o esq ou dir
+        free no elemento
+    se esq e dir
+        ponteiro aponta pra esq
+        vai o mais a direita do esq
+        coloca o dir do elemento que vai ser retirado no mais dir da esq
+        free no elemento
+
+

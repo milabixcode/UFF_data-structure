@@ -1,0 +1,9 @@
+Estabin: todos os nos tem 0 ou 2 filhos
+
+- Checo se árvore é vazia
+    é estbin
+- Checo se o nó atual é uma folha 
+    é estbin
+- Checo se nó tem ambos os filhos diferentes de NULL 
+    checo se ambas as subárvores são estbin
+    se nao, não é estbin

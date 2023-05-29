@@ -1,0 +1,10 @@
+- checo se arvore é vazia
+    ni é zero
+- checo se o primeiro elemento tem filhos
+    se nao tiver ni é zero
+    se tiver somo no contador ni
+- checo se primeiro elemento tem esquerda e direita
+- percorro esquerda enquanto tiver esquerda
+    se tiver filhos somo no contador 
+- percorro direita enquanto tive direita 
+    se tiver filhos somo no contador
