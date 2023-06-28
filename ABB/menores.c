@@ -1,4 +1,4 @@
-// Função que retorna num vetor todos os elementos menores que N. A função deve ter o
+// Função que retorna num vetor todos os elementos menores que N
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -16,18 +16,6 @@ TAB *inicializa(void)
 {
     return NULL;
 }
-
-TAB *cria(int info, TAB *esq, TAB *dir)
-{
-    TAB *novo = (TAB *)malloc(sizeof(TAB));
-
-    novo->info = info;
-    novo->esq = esq;
-    novo->dir = dir;
-
-    return novo;
-}
-
 TAB *criaArvore(char entrada[100], int tamanho)
 {
     char novaEntrada[100];

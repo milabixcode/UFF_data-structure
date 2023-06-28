@@ -80,11 +80,11 @@ int nf(TAB *a)
     int nos = 0;
     if (a->esq)
     {
-        nos += nf(a->esq);
+        nos =+ nf(a->esq);
     }
     if (a->dir)
     {
-        nos += nf(a->dir);
+        nos =+ nf(a->dir);
     }
     return nos;
 }

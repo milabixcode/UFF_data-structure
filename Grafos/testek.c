@@ -15,12 +15,14 @@ typedef struct grafo
     TVizinho *primeiro_vizinho;
 } TGrafo;
 
-int testek(TGrafo *g, int k)
-{
-    if (!g)
-    {
-        return 0; 
+int testek(TGrafo *g, int k){
+    if(!g) return 1;
+    TVizinho *v = g->primeiro_vizinho;
+    int i = 0;
+    while(v){
+        v = v->prox;
+        i++;
     }
-
-
+    if(i == k) return testek(g->prox, k);
+    else return 0;
 }

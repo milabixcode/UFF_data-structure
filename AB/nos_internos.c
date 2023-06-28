@@ -74,8 +74,8 @@ int ni(TAB *a)
     else
     {
         int contador = 1;
-        contador += ni(a->esq);
-        contador += ni(a->dir);
+        contador =+ ni(a->esq);
+        contador =+ ni(a->dir);
         return contador;
     }
 }
