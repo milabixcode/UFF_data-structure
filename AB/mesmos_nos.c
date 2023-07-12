@@ -85,7 +85,7 @@ int compara_listas(TLista *l1, TLista *l2)
     }
 }
 
-TLista* percorre(TNoA *no, TLista* li)
+TLista *percorre(TNoA *no, TLista *li)
 {
     if (no != NULL)
     {
@@ -96,9 +96,11 @@ TLista* percorre(TNoA *no, TLista* li)
     return li;
 }
 
-void libera_lista(TLista* li){
-    if(li != NULL){
-        TLista* prox = li->prox;
+void libera_lista(TLista *li)
+{
+    if (li != NULL)
+    {
+        TLista *prox = li->prox;
         free(li);
         libera_lista(prox);
     }
@@ -118,7 +120,7 @@ int mesmos_nos(TNoA *a1, TNoA *a2)
     }
     TLista *lista1 = cria_lista();
     TLista *lista2 = cria_lista();
-    
+
     lista1 = percorre(a1, lista1);
     lista2 = percorre(a2, lista2);
 

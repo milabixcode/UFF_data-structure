@@ -23,11 +23,13 @@ TABB *retira(TABB *a, int x)
 
     if (a->info == x)
     {
+        //NO FOLHA
         if (!a->esq && !a->dir)
         {
             free(a);
             a = NULL;
         }
+        //NO COM UM FILHO
         else if (!a->esq || !a->dir)
         {
             TABB *p;
@@ -44,6 +46,7 @@ TABB *retira(TABB *a, int x)
                 a = p;
             }
         }
+        //NO COM DOIS FILHOS
         else
         {
             TABB *p, *q;
