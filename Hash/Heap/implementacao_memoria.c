@@ -146,7 +146,6 @@ int main(void)
     {
         return 0;
     }
-
     // vetor começara em 1, por isso alocação de tamanho n+1
     heap = (int *)malloc(sizeof(int) * (n + 1));
 }
