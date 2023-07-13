@@ -580,12 +580,15 @@ int qtd_menores(TABB *a, int N)
     return contador;
 }
 
-void grava_vetor(TABB *a, int N, int* vetor, int* contador){
-    if(!a){
+void grava_vetor(TABB *a, int N, int *vetor, int *contador)
+{
+    if (!a)
+    {
         return;
     }
 
-    if (a->info < N) {
+    if (a->info < N)
+    {
         vetor[*contador] = a->info;
         *contador += 1;
     }
@@ -608,6 +611,106 @@ int *mN(TABB *a, int N)
     grava_vetor(a, N, vetor, &contador);
 
     return vetor;
+}
+
+// GRAFOS
+
+// Questão 01
+// Descobre quantidade de arestas
+int na(TGrafo *g)
+{
+    // contador começa a 0
+    int contador_vizinhos = 0;
+
+    // guardo o primeiro vizinho em uma variável
+    TVizinho *proximo = g->primeiro_vizinho;
+    // enquanto eu tiver um proximo
+    // somo 1 no contador
+    // e vou para o proximo
+    while (proximo)
+    {
+        contador_vizinhos += 1;
+        proximo = proximo->prox;
+    }
+
+    // se o grafo tiver o proximo
+    if (g->prox)
+    {
+        return contador_vizinhos + na(g->prox);
+    }
+
+    return contador_vizinhos;
+}
+
+// Questão 02
+// Descobre a quantidade de vértices
+int nv(TGrafo *g)
+{
+    int contador = 1;
+    while (g)
+    {
+        g = g->prox;
+        contador += 1;
+    }
+    return contador - 1;
+}
+
+// Questao 03
+// Testar se dois grafos são iguais
+int iguais(TGrafo *g1, TGrafo *g2)
+{
+    // Checo se ambos sao vazios: sao iguais
+    if (!g1 && !g2)
+    {
+        return 1;
+    }
+    // se um dos dois é vazio: são diferentes
+    if (!g1 || !g2)
+    {
+        return 0;
+    }
+
+    TVizinho *v1 = g1->primeiro_vizinho;
+    TVizinho *v2 = g2->primeiro_vizinho;
+
+    // se o g1 for igual ao g2
+    // enqto existir um vizinho
+    // se v1 for igual a v2 vai pro proximo e vai comparando
+    // se nao, retorna 0 pq é diferente
+    if (g1->id == g2->id)
+    {
+        while (v1 && v2)
+        {
+            if (v1->id_vizinho == v2->id_vizinho)
+            {
+                v1 = v1->prox;
+                v2 = v2->prox;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        // faz o mesmo para cada vertice
+        return sao_iguais(g1->prox, g2->prox);
+    }
+}
+
+// Questao 05
+// Testa se nós vizinhos não possuem a mesma cor
+// retorna 1 se cores diferentes e 0 se cores iguais
+
+int nao_tem_mesma_cor(TGrafo *g)
+{
+     if (g->cor != g->primeiro_vizinho->cor)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+
 }
 
 int main(void)

@@ -27,18 +27,18 @@ int dobra(int t, int n, int chave)
 {
     char valor[n];
     int digito;
+    //converte a chave para uma string pra poder acessar cada posição do 'numero'
     sprintf(valor, "%d", chave);
+    //a dobra acontece de de t em t
     for (int i = 0; i < n; i += t)
     {
-        for (int j = i; j < i + t; j++)
+        for (int j = 0; j < t; j++)
         {
-            digito = valor[j] + valor[2*t-1-j];
+            digito = valor[i + j] + valor[i + 2*t -1-j];
             digito = digito % 10;
-            valor[2*t-1-j] = digito;
+            valor[i+ 2*t-1-j] = digito;
         }                
     }
-    
-
 }
 
 /* Executa busca em Arquivos por Encadeamento Exterior (Hash)
