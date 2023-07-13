@@ -100,7 +100,7 @@ int exclui(int *heap, int n)
 // Considero uma heap vazia e ir inserindo os elementos de um a um
 // ou considero que a lista é uma heap e corrijo as prioridades
 // assumo que as prioridades das folhas já estão corretas
-//começo acertando a prioridade de 1/2 e vou diminuindo 1
+// começo acertando a prioridade de 1/2 e vou diminuindo 1
 void constroi_heap_maximo(int *heap, int n)
 {
     int i;
@@ -108,6 +108,28 @@ void constroi_heap_maximo(int *heap, int n)
     for (i = j; i >= 1; i--)
     {
         descer(heap, i, n);
+    }
+}
+
+// Ordenação de dados usando Heap - HEAP SORT
+// maior elemento é trocado com o ultimo do vetor
+// considerar vetor com tamanho n-1 e descer a raiz
+// repetir esses passos n-1 vezes
+void heap_sort(int *heap, int n)
+{
+    int i;
+    int j = n;
+    constroi_heap_maximo(heap, n);
+    for (i = n; i > 1; i--)
+    {
+        // troca raiz com o último elemento (posição j)
+        int temp = heap[i];
+        heap[i] = heap[1];
+        heap[i] = temp;
+        // diminui o tamanho do vetor a ser considerado na heap
+        j--;
+        // desce com a raiz nessa nova heap de tamanho j-1;
+        descer(heap, 1, j);
     }
 }
 
